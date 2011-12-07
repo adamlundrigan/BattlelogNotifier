@@ -15,6 +15,8 @@ Simple PHP + Zend Framework script to scrape your account on Battlefield 3's Bat
     
     ```*/5 * * * * /usr/bin/env php -q -f /path/to/BattlelogNotifier/notify.php >/path/to/BattlelogNotifier/run.log 2>&1```
 
+5. OPTIONAL: To use the included friend status display page, symlink ```display.php``` into a location on your server that is publicly accessible.
+
 Now you'll get a Twitter DM whenever your friends are playing Battlefield 3 so you don't miss out on the action!
 
 ## Disclaimer
