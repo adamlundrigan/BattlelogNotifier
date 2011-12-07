@@ -1,7 +1,7 @@
 Battlelog Notifier
 ==================
 
-Simple PHP + Zend Framework script to scrape your account on Battlefield 3's Battlelog site periodically to collect data on your friends and send you Twitter DMs when they start and stop playing.
+Simple PHP + Zend Framework script to scrape your account on Battlefield 3's Battlelog site periodically to collect data on your friends' activity and send you Twitter DMs when they start and stop playing.
 
 ## Setup
 
