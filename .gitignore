@@ -1,2 +1,3 @@
 config.inc.php
 last.json
+*.log
