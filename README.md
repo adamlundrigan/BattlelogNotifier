@@ -19,6 +19,12 @@ Simple PHP + Zend Framework script to scrape your account on Battlefield 3's Bat
 
 Now you'll get a Twitter DM whenever your friends are playing Battlefield 3 so you don't miss out on the action!
 
+# TODOs
+
+* Actually use the CookieJar.  Persist the cookies returned by battlelog in the hopes that we wouldn't have to keep logging in on each request.
+* Find a more elegant way of getting the JSON (say, sniff out a web service...I have no no doubt that there is one)
+
+
 ## Disclaimer
 
 This code is provided AS-IS, with no warranty (explicit or implied) and has not been vetted or tested for deployment in a production environment.  Use of this code at your own risk. 
