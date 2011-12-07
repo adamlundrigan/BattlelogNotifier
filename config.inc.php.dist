@@ -1,0 +1,10 @@
+<?php
+
+define('YOUR_TWITTER_USERNAME', '');
+define('YOUR_TWITTER_OAUTH_TOKEN', '');
+define('YOUR_TWITTER_OAUTH_SECRET', '');
+define('YOUR_TWITTER_CONSUMER_KEY', '');
+define('YOUR_TWITTER_CONSUMER_SECRET', '');
+define('YOUR_BATTLELOG_EMAIL', '');
+define('YOUR_BATTLELOG_PASSWORD', '');
+define('YOUR_DISPLAY_SCRIPT_URL', '');
