@@ -18,6 +18,15 @@ class NotifierOptions
     protected $battlelogPassword;
     protected $battlelogBaseUri = 'https://battlelog.battlefield.com';
 
+    public function __construct(array $cfg = array())
+    {
+        foreach ( $cfg as $key=>$value )
+        {
+           $method = 'set'.ucfirst($key);
+           $this->{$method}($value);
+        }
+    }
+
     public function __call($method, $args)
     {
         if ( preg_match("{^(get|set)(.*)$}is", $method, $matches) )

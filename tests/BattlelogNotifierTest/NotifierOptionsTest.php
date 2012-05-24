@@ -11,7 +11,7 @@ class NotifierOptionsTest extends \PHPUnit_Framework_TestCase
         $this->notifier = new NotifierOptions();
     }
 
-    public function testSettingKnownVariable()
+    public function testSettingKnownVariableViaSetter()
     {
         $this->notifier->setBattlelogEmail('foo@bar.com');
         $this->assertEquals('foo@bar.com', $this->notifier->getBattlelogEmail());
@@ -20,9 +20,17 @@ class NotifierOptionsTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException \BadMethodCallException
      */
-    public function testSettingUnknownVariable()
+    public function testSettingUnknownVariableViaSetter()
     {
         $this->notifier->setDfkdfjlqeff('xxx');
+    }
+
+    public function testSettingKnownVariableViaConstructor()
+    {
+        $notifier = new NotifierOptions(array(
+            'battlelogEmail' => 'foo@bar.com'
+        ));
+        $this->assertEquals('foo@bar.com', $notifier->getBattlelogEmail());
     }
 
 }
