@@ -24,6 +24,23 @@ class HttpClient
         $this->setOptions($cfg);
     }
 
+    public function performUserLogin()
+    {
+        $options = $this->getOptions();
+
+        $client = $this->getHttpClient();
+        $response = $client->setCookieJar()
+                           ->setUri($options->getBattlelogBaseUri() . '/bf3/gate/login/')
+                           ->setParameterPost('redirect', '')
+                           ->setParameterPost('email', $options->getBattlelogEmail())
+                           ->setParameterPost('password', $options->getBattlelogPassword())
+                           ->setParameterPost('remember', '1')
+                           ->setParameterPost('submit', 'Sign In')
+                           ->request('POST');
+        $contents = $response->getBody();
+var_dump($contents);
+    }
+
     /**
      * Set Configuration Object
      * @param HttpClientOptions $cfg
