@@ -19,7 +19,18 @@ class Notifier
      */
     public function __construct(NotifierOptions $cfg)
     {
+        $this->setOptions($cfg);
+    }
+
+    public function setOptions(NotifierOptions $cfg)
+    {
         $this->options = $cfg;
+        return $this;
+    }
+
+    public function getOptions()
+    {
+        return $this->options;
     }
 }
 
