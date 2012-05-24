@@ -16,6 +16,7 @@ class NotifierOptions
     protected $twitterConsumerSecret;
     protected $battlelogEmail;
     protected $battlelogPassword;
+    protected $battlelogBaseUri = 'https://battlelog.battlefield.com';
 
     public function __call($method, $args)
     {
